@@ -6,6 +6,98 @@ section#main {
   justify-content: center;
   align-items: center;
 }
+section#main #carousel {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+section#main #carousel img {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  object-position: bottom;
+  opacity: 0.75;
+  transform: scale(0.9);
+  z-index: -1;
+  transition: all 0.8s;
+}
+section#main #carousel img[active=active] {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 0;
+  transition: all 0.3s, transform 0.6s;
+}
+section#main #carousel #overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, transparent 50%, rgba(0, 0, 0, 0.2) 100%);
+}
+section#main button#menu {
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+}
+section#main .carouselControl {
+  padding: 10px;
+  width: min-content;
+  min-width: 110px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  vertical-align: middle;
+}
+section#main .carouselControl#prev {
+  left: 0;
+  transform: rotate(-90deg);
+}
+section#main .carouselControl#prev:hover {
+  left: -3px;
+}
+section#main .carouselControl#next {
+  right: 0;
+  transform: rotate(90deg);
+}
+section#main .carouselControl#next h4 {
+  padding-right: 0;
+}
+section#main .carouselControl#next:hover {
+  right: -3px;
+}
+section#main .carouselControl #indicator {
+  top: 0;
+  bottom: 0;
+  transform: translateY(0);
+}
+section#main .carouselControl #indicator svg {
+  color: #fff;
+}
+section#main .carouselControl h4 {
+  margin: 0;
+  color: white;
+  padding-right: 10px;
+}
+section#main .carouselControl:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 section#main #title {
   color: white;
   padding: 20px;
