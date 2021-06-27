@@ -6,3 +6,32 @@ section#main {
   justify-content: center;
   align-items: center;
 }
+section#main #title {
+  color: white;
+  padding: 20px;
+  max-width: 80%;
+  position: absolute;
+  top: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section#main #title * {
+  margin: 0;
+}
+section#main #title h1 {
+  margin-bottom: 10px;
+}
+section#main #title button#explore {
+  color: black;
+  margin-top: 140px;
+  min-width: 100px;
+  background-color: rgba(255, 255, 255, 0.616);
+  backdrop-filter: blur(2px) brightness(98%);
+}
+section#main #title button#explore:hover {
+  background-color: transparent;
+  color: white;
+  backdrop-filter: blur(4px);
+}
